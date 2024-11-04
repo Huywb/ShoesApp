@@ -20,7 +20,7 @@ const RegisterPage = () => {
                     </div>
                 </div>
                 <div className='flex flex-col gap-1 w-full'>
-                    <h1 className=' opacity-70 '>Full name</h1>
+                    <h1 className=' opacity-70 '>Email address</h1>
                     <div className='flex p-2 gap-1 bg-[#374151]'>
                         <img src={Mail} alt="" className='w-10 opacity-70 '/>
                         <input type="text" className='bg-transparent outline-none' placeholder='HuyPham@gmail.com' />
