@@ -6,6 +6,8 @@ import HidePass from '../assets/Hide-pass.svg'
 import ShowPass from '../assets/Show-pass.svg'
 import Passwrod from '../assets/Password.svg'
 
+import { Link } from 'react-router-dom'
+
 const LoginPage = () => {
   return (
     <div className='flex justify-center items-center h-screen'>
@@ -31,6 +33,7 @@ const LoginPage = () => {
                     <img src={Login} alt=""  className='w-8'/>
                     <button>Login</button>
                 </div>
+                <p className='font-semibold'>Not a member ? <Link to={'/register'}><span className='font-bold underline cursor-pointer'>Register</span></Link></p>
             </div>
         </div>
     </div>
