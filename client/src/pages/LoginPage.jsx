@@ -6,10 +6,16 @@ import HidePass from '../assets/Hide-pass.svg'
 import ShowPass from '../assets/Show-pass.svg'
 import Passwrod from '../assets/Password.svg'
 
+import {motion} from 'framer-motion'
+
 import { Link } from 'react-router-dom'
 
 const LoginPage = () => {
   return (
+    <motion.div     
+                    initial={{ opacity: 0,y:20 }}
+                    animate={{ opacity: 1,y:0}}
+                    transition={{ duration: .8 }}>
     <div className='flex justify-center items-center h-screen'>
         <div className='flex flex-col gap-10 items-center w-[30%] text-[#eeeeee] text-xl font-bold'>
             <h1 className='text-primary font-bold text-5xl text-shadow-custom '>Login To Your Account</h1>
@@ -37,6 +43,7 @@ const LoginPage = () => {
             </div>
         </div>
     </div>
+    </motion.div >
   )
 }
 

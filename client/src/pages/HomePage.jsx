@@ -3,8 +3,8 @@ import Navbar from '../components/Navbar'
 
 const HomePage = () => {
   return (
-    <div>
-      <Navbar></Navbar>
+    <div className='px-[10%] '>
+      <h1>trest</h1>
     </div>
   )
 }
