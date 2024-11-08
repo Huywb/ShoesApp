@@ -12,7 +12,7 @@ export const fetchGet = async (url, params) => {
     return response.data
   } catch (error) {
     console.error(`GET request failed for ${url}:`, error);
-  
+    throw error;
   }
   };
   
@@ -22,7 +22,7 @@ export const fetchPost = async (url, data) => {
     return response.data
   } catch (error) {
     console.error(`POST request failed for ${url}:`, error);
-
+    throw error;
   }
   };
   
@@ -32,7 +32,7 @@ export const fetchPut = async (url, data) => {
     return response.data
   } catch (error) {
     console.error(`PUT request failed for ${url}:`, error);
-
+    throw error;
   }
   };
   
@@ -42,6 +42,6 @@ export const fetchDelete = async (url) => {
     return response.data
   } catch (error) {
     console.error(`DELETE request failed for ${url}:`, error);
-    
+    throw error;
   }
   };

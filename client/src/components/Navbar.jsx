@@ -8,7 +8,7 @@ import Login from '../assets/Login.svg'
 const Navbar = () => {
   const user = false
   return (
-    <div className='sticky px-[10%] top-0 flex items-center justify-between h-auto py-6 bg-black text-white'>
+    <div className='sticky z-50 px-[10%] top-0 flex items-center justify-between h-auto py-6 bg-black text-white'>
         <div>
           <Link to={'/'}><h1 className='font-bold text-3xl'>Shoes-App</h1></Link>
         </div>
