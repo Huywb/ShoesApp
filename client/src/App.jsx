@@ -6,6 +6,7 @@ import LoginPage from "./pages/LoginPage";
 import CartPage from "./pages/CartPage";
 import Navbar from "./components/Navbar";
 import NavBarLayout from "./utils/Layout/NavBarLayout";
+import AdminPage from "./pages/AdminPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route element={<NavBarLayout></NavBarLayout>}>
           <Route path="/" element={<HomePage></HomePage>}></Route>
           <Route path="/cart" element={<CartPage></CartPage>}></Route>
+          <Route path="/dashboard/:menu" element={<AdminPage></AdminPage>}></Route>
         </Route>
 
         <Route path="/login" element={<LoginPage></LoginPage>}></Route>

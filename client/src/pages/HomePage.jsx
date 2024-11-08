@@ -3,15 +3,20 @@ import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import { categories } from "../utils/data/Categories";
 
-console.log(categories.name);
+import {motion} from 'framer-motion'
+
 
 const HomePage = () => {
   return (
-    <div className="flex flex-col items-center  w-full ">
+    <div className="flex flex-col items-center   ">
       <div className="flex flex-col gap-4 items-center pt-10">
         <h1 className="text-5xl text-primary font-bold">Explore Our Categories</h1>
         <p className="text-lg text-white opacity-70">Discover the latest trends in eco-friendly fashion</p>
-      </div><div className="flex items-center justify-center w-[60%] ">
+      </div>
+      <motion.div   className="flex items-center justify-center w-[60%] "  
+                    initial={{ opacity: 0,y:50 }}
+                    animate={{ opacity: 1,y:0}}
+                    transition={{ duration: 3 }}>
         <div className="flex flex-wrap justify-center w-full">
           {categories.map((item, index) => (
             <Link
@@ -34,7 +39,7 @@ const HomePage = () => {
           ))}
         </div>
 
-      </div>
+      </motion.div>
     </div>
   );
 };
