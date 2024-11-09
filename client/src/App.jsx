@@ -8,6 +8,8 @@ import Navbar from "./components/Navbar";
 import NavBarLayout from "./utils/Layout/NavBarLayout";
 import AdminPage from "./pages/AdminPage";
 
+import { Toaster } from 'react-hot-toast';
+
 function App() {
   return (
     <div className="min-h-screen bg-gradient-to-r from-darkGreenStart via-darkGreenMid to-darkGreenStart">
@@ -21,6 +23,7 @@ function App() {
         <Route path="/login" element={<LoginPage></LoginPage>}></Route>
         <Route path="/register" element={<RegisterPage></RegisterPage>}></Route>
       </Routes>
+      <Toaster></Toaster>
     </div>
   );
 }
