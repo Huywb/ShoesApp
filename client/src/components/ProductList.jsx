@@ -14,6 +14,8 @@ const ProductList = () => {
           <span className="flex-[2] text-center">ACTIONS</span>
         </div>
         <ProductCard></ProductCard>
+        <ProductCard></ProductCard>
+        <ProductCard></ProductCard>
       </div>
     </div>
   );
