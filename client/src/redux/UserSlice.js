@@ -10,7 +10,7 @@ export const fetchUser = createAsyncThunk('user/fetchUser', async () => {
 
 const userSlice = createSlice({
   name: 'user',
-  initialState: { user: null, status: '', error: null },
+  initialState: { user: null, status: '', error: null,cart : '' },
   reducers: {
     resetUser: (state) => {
       state.user = null

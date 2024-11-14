@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Add this to your CSS file */
+.custom-scrollbar::-webkit-scrollbar {
+    height: 1px;
+    width: 4px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #54d8ac; /* Change to desired color */
+    border-radius: 4px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background-color: transparent; /* Change to desired track color */
+  }
+  
