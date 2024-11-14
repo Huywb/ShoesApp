@@ -9,6 +9,8 @@ import NavBarLayout from "./utils/Layout/NavBarLayout";
 import AdminPage from "./pages/AdminPage";
 
 import { Toaster } from 'react-hot-toast';
+import CategoriItem from "./components/CategoriItem";
+import CategoryPage from "./pages/CategoryPage";
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
           <Route path="/" element={<HomePage></HomePage>}></Route>
           <Route path="/cart" element={<CartPage></CartPage>}></Route>
           <Route path="/dashboard/:menu" element={<AdminPage></AdminPage>}></Route>
+          <Route path="/category/:category" element={<CategoryPage></CategoryPage>}></Route>
         </Route>
 
         <Route path="/login" element={<LoginPage></LoginPage>}></Route>

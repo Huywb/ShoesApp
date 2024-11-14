@@ -9,12 +9,12 @@ import Create from '../../assets/plus.svg'
 import Analytics from '../../assets/chart.svg'
 
 export const categories = [
-	{ href: "/jeans", name: "Jeans", imageUrl: jeans },
-	{ href: "/t-shirts", name: "T-shirts", imageUrl: tshirt },
-	{ href: "/shoes", name: "Shoes", imageUrl: shoes },
-	{ href: "/glasses", name: "Glasses", imageUrl: glasses },
-	{ href: "/jackets", name: "Jackets", imageUrl: jackets },
-	{ href: "/suits", name: "Suits", imageUrl: suits },
+	{ href: "jeans", name: "Jeans", imageUrl: jeans },
+	{ href: "t-shirts", name: "T-shirts", imageUrl: tshirt },
+	{ href: "shoes", name: "Shoes", imageUrl: shoes },
+	{ href: "glasses", name: "Glasses", imageUrl: glasses },
+	{ href: "jackets", name: "Jackets", imageUrl: jackets },
+	{ href: "suits", name: "Suits", imageUrl: suits },
 ];
 export const menuAdmin = [
 	{

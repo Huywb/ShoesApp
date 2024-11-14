@@ -21,7 +21,7 @@ const HomePage = () => {
           {categories.map((item, index) => (
             <Link
               key={index}
-              to={item.href}
+              to={`/category/${item.href}`}
               className="flex justify-center items-center relative w-1/3 p-2 overflow-hidden"
             >
               <div className="w-full h-[300px] relative">

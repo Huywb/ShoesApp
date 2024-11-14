@@ -84,7 +84,7 @@ const AdminPage = () => {
                 to={`/dashboard/${item.url}`}
                 key={index}
                 className={`flex gap-2 rounded-md ${
-                  menu === item.url ? "bg-[#047552]" : ""
+                  menu === item.url ? "bg-[#047552]" : "bg-[#374151]"
                 } p-3 `}
               >
                 <img src={item.image} alt={item.image} />
