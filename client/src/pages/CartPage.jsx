@@ -3,6 +3,7 @@ import shoping from "../assets/Shoping.svg";
 import { Link } from "react-router-dom";
 import CartItem from "../components/CartItem";
 import SuggetProduct from "../components/SuggetProduct";
+import OrderSumary from "../components/OrderSumary";
 
 const CartPage = () => {
   const list = [1];
@@ -23,7 +24,7 @@ const CartPage = () => {
             <SuggetProduct></SuggetProduct>
           </div>
           <div className="flex-[2] ">
-            dsadsa
+            <OrderSumary></OrderSumary>
           </div>
         </div>
         </div>

@@ -65,7 +65,7 @@ const CartItem = () => {
   }
   return (
     <div className='flex flex-col gap-2'>
-      <div className='bg-[#1f2936]  w-full flex text-white p-4 gap-2'>
+      <div className='bg-[#1f2936]  w-full flex text-white p-4 gap-2 border border-opacity-20 border-white rounded-lg'>
           <img src={bags} alt="" className='object-cover min-w-[200px] max-h-[150px]' />
           <div className='flex gap-2  w-full'>
             <div className='flex-[4] flex-col justify-between flex gap-2  p-4'>
