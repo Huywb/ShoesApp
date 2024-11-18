@@ -1,6 +1,7 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import { ConnectDB } from './utils/DBConnect.js'
+import userRouter from './router/User.js'
 
 
 dotenv.config()
@@ -9,9 +10,7 @@ const app = express()
 
 const PORT = 9090
 
-app.get('/api',(req,res)=>{
-    res.json({message:"This is backend"})
-})
+app.get('/api/user',userRouter)
 
 
 
