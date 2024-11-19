@@ -1,5 +1,7 @@
 import bcrypt from "bcrypt";
 import User from "../../models/user/User.js"; 
+import jwt from 'jsonwebtoken'
+import { AccessToken, RefreshToken } from "../../utils/GenerationToken.js";
 export const register = async (req, res) => {
   try {
     const { fullName, email, password, CfPassword } = req.body;
@@ -57,7 +59,17 @@ export const login = async (req, res) => {
       return res.status(401).json({ message: "Incorrect password" });
     }
 
-    res.status(200).json({ user: checkUser, message: "Login successful" });
+    const token = AccessToken(checkUser._id)
+    const RFToken = RefreshToken(checkUser._id)
+
+    res.cookie('refreshToken',RFToken,{
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production", 
+      sameSite: "strict",
+      maxAge: 7 * 24 * 60 * 60 * 1000,
+    })
+
+    res.status(200).json({ user: checkUser,token, message: "Login successful" });
   } catch (error) {
     console.error("Error in login:", error);
     res.status(500).json({ message: "Internal server error" });
