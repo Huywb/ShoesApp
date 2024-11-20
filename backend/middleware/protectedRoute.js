@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken'
-import { AccessToken } from '../utils/GenerationToken'
+import { AccessToken } from '../utils/GenerationToken.js'
 
 export const protectedRoute = async (req,res,next)=>{
     try {
