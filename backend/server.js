@@ -3,6 +3,7 @@ import dotenv from 'dotenv'
 import { ConnectDB } from './utils/DBConnect.js'
 import userRouter from './router/User.js'
 import categoryRouter from './router/Category.js'
+import productRouter from './router/Product.js'
 
 
 dotenv.config()
@@ -13,6 +14,7 @@ const PORT = 9090
 
 app.get('/api/user',userRouter)
 app.get('/api/category',categoryRouter)
+app.get('/api/product',productRouter)
 
 
 
