@@ -1,10 +1,31 @@
 import Cart from "../../models/cart/Cart.js"
 
 
+
+export const createCart = async(req,res)=>{
+    try {
+        const {product, discount,totalPrice } = req.body
+        if(product.length<1){
+            return res.status(404).json({message:"No item in cart"})
+        }
+
+        const newCart = await Cart.create({
+            userId : req.user,
+            product,
+            discount,
+            status: 'pending',
+            totalPrice
+        })
+        res.status(200).json({data: newCart,message:"Create Cart success"})
+    } catch (error) {
+        console.error("Error",error)
+        res.status(500).json({message: "Internal server error"})
+    }
+}
+
 export const getAllCart = async(req,res)=>{
     try {
-        const {id} = req.body
-        const allcart = await Cart.find({userId: id}).populate("product.productId");
+        const allcart = await Cart.find({userId: req.user}).populate("product.productId");
         if(allcart.length <1){
             return res.status(204).json({message:"Cart is empty"})
         }
